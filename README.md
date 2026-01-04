@@ -6,9 +6,9 @@
 
 
 
-This project models and simulates a \*\*4-DOF ReBel robotic arm\*\* for a \*\*pick-and-place\*\* task using MATLAB.  
+This project models and simulates a **4-DOF ReBel robotic arm** for a **pick-and-place**task using MATLAB.  
 
-It covers the full workflow from \*\*Denavit–Hartenberg (DH) modeling\*\* and \*\*Forward Kinematics (FK)\*\* to \*\*Inverse Kinematics (IK)\*\*, \*\*trajectory planning\*\*, and \*\*3D visualization\*\* of the arm executing movements between workstations and rack locations.
+It covers the full workflow from **Denavit–Hartenberg (DH) modeling** and **Forward Kinematics (FK)** to **Inverse Kinematics (IK)**, **trajectory planning**, and **3D visualization**of the arm executing movements between workstations and rack locations.
 
 
 
@@ -22,17 +22,17 @@ It covers the full workflow from \*\*Denavit–Hartenberg (DH) modeling\*\* and 
 
 \## Key Features
 
-\- \*\*DH Parameter Modeling\*\* and transformation matrices for a 4-DOF manipulator.:contentReference\[oaicite:2]{index=2}:contentReference\[oaicite:3]{index=3}
+\- **DH Parameter Modeling** and transformation matrices for a 4-DOF manipulator.:contentReference\[oaicite:2]{index=2}:contentReference\[oaicite:3]{index=3}
 
-\- \*\*Forward Kinematics (FK)\*\* to compute end-effector pose using chained transforms.:contentReference\[oaicite:4]{index=4}
+\- **Forward Kinematics (FK)** to compute end-effector pose using chained transforms.:contentReference\[oaicite:4]{index=4}
 
-\- \*\*Inverse Kinematics (IK)\*\* to compute joint angles for target (x, y, z) positions with reachability checks.:contentReference\[oaicite:5]{index=5}:contentReference\[oaicite:6]{index=6}
+\- **Inverse Kinematics (IK)** to compute joint angles for target (x, y, z) positions with reachability checks.:contentReference\[oaicite:5]{index=5}:contentReference\[oaicite:6]{index=6}
 
-\- \*\*Verification step\*\*: validates IK solutions by re-running FK to confirm the resulting end-effector pose.:contentReference\[oaicite:7]{index=7}:contentReference\[oaicite:8]{index=8}
+\- **Verification step**: validates IK solutions by re-running FK to confirm the resulting end-effector pose.:contentReference\[oaicite:7]{index=7}:contentReference\[oaicite:8]{index=8}
 
-\- \*\*Trajectory planning\*\* (θ vs time) using interpolation (e.g., `pchip`) for smooth joint motion across waypoints.:contentReference\[oaicite:9]{index=9}
+\- **Trajectory planning** (θ vs time) using interpolation (e.g., `pchip`) for smooth joint motion across waypoints.:contentReference\[oaicite:9]{index=9}
 
-\- \*\*3D robot visualization \& animation\*\*, including link/joint plotting and end-effector trajectory display.:contentReference\[oaicite:10]{index=10}:contentReference\[oaicite:11]{index=11}
+\- **3D robot visualization \& animation**, including link/joint plotting and end-effector trajectory display.:contentReference\[oaicite:10]{index=10}:contentReference\[oaicite:11]{index=11}
 
 
 
@@ -58,7 +58,7 @@ It covers the full workflow from \*\*Denavit–Hartenberg (DH) modeling\*\* and 
 
 \## Pick-and-Place Scenario
 
-Targets include \*\*two pickup points\*\* and \*\*rack placement points\*\* (rack grid context in the report).:contentReference\[oaicite:16]{index=16}
+Targets include **two pickup points** and **rack placement points** (rack grid context in the report).:contentReference\[oaicite:16]{index=16}
 
 
 
