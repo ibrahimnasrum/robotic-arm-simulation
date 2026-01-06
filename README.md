@@ -22,3 +22,12 @@ Includes **DH-style transforms**, **FK/IK**, **verification of IK using FK**, **
 
 ```matlab
 main_pick_and_place
+```
+
+## Group Members
+
+1. IBRAHIM BIN NASRUM (2116467)
+2. SHAREEN ARAWIE BIN HISHAM (2116943)
+3. AHMAD HAFIZULLAH BIN IBRAHIM (2216185)
+4. YOUSHA ABDULLAH (1929821)
+5. MUHAMMAD SAAD ELDIN (G2321795)
