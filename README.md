@@ -23,6 +23,98 @@ Includes **DH-style transforms**, **FK/IK**, **verification of IK using FK**, **
 ```matlab
 main_pick_and_place
 ```
+### Expected Outputs
+
+- Command Window: IK angles + FK verification result
+- Figures:
+  - θ vs time (Joint 1–4)
+  - End-effector 3D path (Cartesian trajectory)
+  - 3D robot animation (if enabled)
+
+---
+
+## Repository Structure (What each file does)
+
+### Main Scripts
+- main_pick_and_place.m
+Main driver script. Runs the complete workflow:
+1. define robot parameters & waypoints
+2. compute IK for start/end points
+3. verify IK using FK
+4. generate smooth joint trajectories
+5. plot θ vs time and end-effector path
+6. animate robot in 3D
+- robotic_arm_rebel4dof_main.m
+Alternative main script / consolidated demo version (useful as backup).
+
+---
+
+### Core Kinematics
+- fk_rebel4dof.m — Forward Kinematics
+Computes the chained transformation matrix **T0_4** (base → end-effector) using DH-style transforms.
+Also returns intermediate joint positions for plotting and animation.
+
+- ik_rebel4dof.m — Inverse Kinematics
+Solves joint angles **[θ1 θ2 θ3 θ4]** (degrees) for a target point (x, y, z).
+Includes a reachability check (throws an error if target is out of workspace).
+
+### Planning & Visualization
+
+- plan_trajectory.m — Trajectory Planning
+Generates a smooth joint trajectory using interpolation **(PCHIP)** between waypoints.
+Output is used for θ-vs-time plots and animation playback.
+- animate_rebel4dof.m — 3D Animation
+Animates the robot by calling FK at each timestep and plotting link/joint positions.
+
+### Validation / Testing
+
+- verify_fk_example.m — Verification Utility
+Confirms IK results by plugging solved angles into FK and checking the resulting end-effector pose.
+
+--- 
+
+## Documentation
+- Full_Report_Robotics Project.pdf — Full report/documentation (derivation, results, plots)
+
+---
+
+## Robot Parameters (mm)
+
+The simulation uses the following robot dimensions:
+- d1 = 252 (base height)
+- a2 = 237 (link length)
+- a3 = 244 (link length)
+- d4 = 142 (end-effector / gripper offset)
+
+---
+
+## Pick-and-Place Waypoints (mm)
+
+Example tasks included in the main script:
+- Task 1: WP1 [-200, 20, 370.5] → Rack2 [-180, 70, 550]
+- Task 2: WP2 [-200, 50, 370.5] → Rack16 [180, 70, 450]
+
+---
+
+## Outputs (What you will see)
+
+- IK solutions (deg) printed for each waypoint
+- FK verification transformation matrix T0_4
+- θ vs time plots for joints 1–4 (Task 1 vs Task 2)
+- 3D end-effector trajectory plot
+- 3D robot animation showing link motion
+  
+---
+
+## Notes / Assumptions
+
+- The IK solution uses a standard geometric approach and assumes a simplified wrist orientation constraint.
+- You can extend this project by adding:
+  - joint limits and multiple IK branches (elbow-up / elbow-down)
+  - velocity/acceleration constraints
+  - workspace boundary / collision checks
+  - Robotics Toolbox integration for dynamics
+---
 
 ## Group Members
 
